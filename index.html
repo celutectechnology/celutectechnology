@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#111113">
+    <title>Celutec</title>
+    <meta name="description" content="Celutec - Especialistas en iPhone Serie 17 y Serie 18 Pro, AirPods y Apple Watch en Pereira con 20% de descuento.">
+
+    <!-- Icono en la pestaña del navegador -->
+    <link rel="icon" href="img/logo.jpg">
+
+    <!-- Fuentes con personalidad propia (Sin negrillas): Syne + Outfit + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&family=Outfit:wght@300;400&family=Syne:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Íconos) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ==================== BARRA DE NAVEGACIÓN ==================== -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="#inicio" class="logo">
+                <img data-local-img="logo" src="img/logo.jpg" alt="Logo Celutec" class="logo-img">
+                <span class="logo-text">CELU<span class="logo-accent">TEC</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#inicio" class="nav-link active" data-i18n="nav_home">Inicio</a>
+                <a href="#nosotros" class="nav-link" data-i18n="nav_about">Nosotros</a>
+                <a href="#productos" class="nav-link" data-i18n="nav_products">Catálogo</a>
+                <a href="#contacto" class="nav-link" data-i18n="nav_contact">Contacto</a>
+                <a href="#ubicacion" class="nav-link" data-i18n="nav_location">Ubicación</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Selector de Idioma Funcional (Español por defecto, Inglés, Francés) -->
+                <div class="lang-switcher" aria-label="Cambiar idioma">
+                    <button type="button" class="lang-btn active" data-lang="es" onclick="cambiarIdioma('es')">ES</button>
+                    <span class="lang-sep">/</span>
+                    <button type="button" class="lang-btn" data-lang="en" onclick="cambiarIdioma('en')">EN</button>
+                    <span class="lang-sep">/</span>
+                    <button type="button" class="lang-btn" data-lang="fr" onclick="cambiarIdioma('fr')">FR</button>
+                </div>
+
+                <button class="cart-btn" id="cartBtn" aria-label="Ver carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== SECCIÓN HERO (Sin la etiqueta superior eliminada) ==================== -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg-media">
+            <img data-local-img="celulares" src="img/celulares.jpg" alt="Colección iPhone Celutec" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span data-i18n="hero_title_1">Lo Último de Apple</span><br>
+                <span class="gradient-text" data-i18n="hero_title_2">al Mejor Precio</span>
+            </h1>
+
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+                En <span class="text-highlight">CELUTEC</span> encuentras toddos los nuevos modelos de apple</span> hasta con un <span class="text-accent">20% de descuento</span> garantizado sobre el precio comercial.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#productos" class="btn btn-primary">
+                    <span class="btn-label" data-i18n="hero_btn_catalog">Explorar Catálogo</span>
+                    <span class="btn-node"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                </a>
+                <a href="https://wa.me/573148094050?text=Hola%20Celutec%2C%20me%20interesa%20conocer%20sus%20productos" 
+                   class="btn btn-outline" target="_blank" rel="noopener">
+                    <span class="btn-label" data-i18n="hero_btn_contact">Atención en WhatsApp</span>
+                    <span class="btn-node"><i class="fa-brands fa-whatsapp"></i></span>
+                </a>
+            </div>
+
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span class="trust-index">01</span>
+                    <span data-i18n="trust_warranty">Garantía oficial incluida</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-index">02</span>
+                    <span data-i18n="trust_shipping">Envíos inmediatos en Pereira</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <span class="trust-index">03</span>
+                    <span data-i18n="trust_discount">20% menos que el mercado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN QUIÉNES SOMOS ==================== -->
+    <section class="section about" id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="about_label">01 / IDENTIDAD</span>
+                <h2 class="section-title" data-i18n="about_title">Quiénes Somos</h2>
+            </div>
+
+            <div class="about-showcase" data-animate>
+                <div class="about-logo-card">
+                    <img data-local-img="logo" src="img/logo.jpg" alt="Celutec Celulares y Accesorios Pereira" class="about-logo-img">
+                </div>
+
+                <div class="about-text-content">
+                    <span class="about-tag" data-i18n="about_tag">Tienda Especializada en Pereira</span>
+                    <h3 data-i18n="about_heading">Diseño, tecnología y respaldo real</h3>
+                    <p data-i18n="about_p1">
+                        <span class="text-dark-highlight">CELUTEC</span> es un espacio dedicado a acercar los últimos lanzamientos de iPhone, 
+                        Apple Watch y AirPods originales con valores justos, porque en Celutec creemos que la innovación de alto nivel debe vivirse con total confianza.
+                    </p>
+                    <p data-i18n="about_p2">
+                        Te recibimos en nuestra sede física de la <span class="text-dark-highlight">Cra. 7 #17-60, centro de Pereira</span>, 
+                        con asesoría transparente, acompañamiento técnico y entrega inmediata.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-pill"><span class="pill-dot"></span> <span data-i18n="pill_1">Equipos 100% Originales</span></div>
+                        <div class="highlight-pill"><span class="pill-dot"></span> <span data-i18n="pill_2">Sede Física en Pereira</span></div>
+                        <div class="highlight-pill"><span class="pill-dot"></span> <span data-i18n="pill_3">Respaldo y Garantía</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-animate>
+                    <span class="feature-number">01</span>
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h3 data-i18n="feat_1_title">20% de Beneficio</h3>
+                    <p data-i18n="feat_1_desc">Cada referencia de nuestra colección mantiene un 20% de descuento real frente al precio comercial tradicional.</p>
+                </div>
+
+                <div class="feature-card" data-animate>
+                    <span class="feature-number">02</span>
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 data-i18n="feat_2_title">Sello Original</h3>
+                    <p data-i18n="feat_2_desc">Dispositivos Apple nuevos, verificados y con garantía directa para tu total tranquilidad.</p>
+                </div>
+
+                <div class="feature-card" data-animate>
+                    <span class="feature-number">03</span>
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 data-i18n="feat_3_title">Curaduría Experta</h3>
+                    <p data-i18n="feat_3_desc">Te orientamos en cada detalle técnico para que elijas exactamente el modelo que se adapta a tu ritmo.</p>
+                </div>
+
+                <div class="feature-card" data-animate>
+                    <span class="feature-number">04</span>
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </div>
+                    <h3 data-i18n="feat_4_title">Experiencia Física</h3>
+                    <p data-i18n="feat_4_desc">Visítanos, interactúa con los equipos y retira el tuyo el mismo día en la Cra. 7 #17-60.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN PRODUCTOS ==================== -->
+    <section class="section products-section" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="prod_label">02 / COLECCIÓN</span>
+                <h2 class="section-title" data-i18n="prod_title">Catálogo Seleccionado</h2>
+                <p class="section-description" data-i18n="prod_desc">
+                    Todos los valores exhibidos ya integran el <span class="text-dark-highlight">20% de descuento</span> sobre el precio comercial en Colombia. 
+                    Selecciona tus dispositivos y tramita tu pedido directo por WhatsApp.
+                </p>
+            </div>
+
+            <!-- Botones de filtro -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos" data-i18n="filter_all">Colección Completa</button>
+                <button class="filter-btn" data-filter="iphone18" data-i18n="filter_ip18">Serie iPhone 18</button>
+                <button class="filter-btn" data-filter="iphone17" data-i18n="filter_ip17">Serie iPhone 17</button>
+                <button class="filter-btn" data-filter="audifonos" data-i18n="filter_audio">Audio AirPods</button>
+                <button class="filter-btn" data-filter="watch" data-i18n="filter_watch">Apple Watch</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+
+                <!-- ==================== SERIE IPHONE 18 ==================== -->
+
+                <!-- 1. iPhone 18 Pro Max -->
+                <div class="product-card" data-category="iphone18" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img data-local-img="phone18promax,iphone18promax" src="img/phone18promax.jpg" alt="iPhone 18 Pro Max" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_ip18">Serie iPhone 18</span>
+                        <h3 class="product-name">iPhone 18 Pro Max</h3>
+                        <p class="product-specs" data-i18n="spec_ip18pm">256GB · Chip A20 Pro · Pantalla 6.9"</p>
+                        <div class="product-prices">
+                            <span class="price-original">$7.999.900</span>
+                            <span class="price-current">$6.399.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('iPhone 18 Pro Max', 6399900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. iPhone 18 Pro -->
+                <div class="product-card" data-category="iphone18" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image photo-full">
+                        <img data-local-img="phone18pro,iphone18pro" src="img/phone18pro.jpg" alt="iPhone 18 Pro" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_ip18">Serie iPhone 18</span>
+                        <h3 class="product-name">iPhone 18 Pro</h3>
+                        <p class="product-specs" data-i18n="spec_ip18p">256GB · Chip A20 Pro · Pantalla 6.3" 120Hz</p>
+                        <div class="product-prices">
+                            <span class="price-original">$7.199.900</span>
+                            <span class="price-current">$5.759.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('iPhone 18 Pro', 5759900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ==================== SERIE IPHONE 17 ==================== -->
+
+                <!-- 3. iPhone 17 Pro Max -->
+                <div class="product-card" data-category="iphone17" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro-max.jpg" 
+                             alt="iPhone 17 Pro Max" loading="lazy"
+                             onerror="this.src='https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro-max.jpg';">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_ip17">Serie iPhone 17</span>
+                        <h3 class="product-name">iPhone 17 Pro Max</h3>
+                        <p class="product-specs" data-i18n="spec_ip17pm">256GB · Chip A19 Pro · Triple Cámara 48MP</p>
+                        <div class="product-prices">
+                            <span class="price-original">$7.299.900</span>
+                            <span class="price-current">$5.839.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('iPhone 17 Pro Max', 5839900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. iPhone 17 Pro -->
+                <div class="product-card" data-category="iphone17" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17-pro.jpg" 
+                             alt="iPhone 17 Pro" loading="lazy"
+                             onerror="this.src='https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg';">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_ip17">Serie iPhone 17</span>
+                        <h3 class="product-name">iPhone 17 Pro</h3>
+                        <p class="product-specs" data-i18n="spec_ip17p">256GB · Chip A19 Pro · Pantalla 6.3"</p>
+                        <div class="product-prices">
+                            <span class="price-original">$6.499.900</span>
+                            <span class="price-current">$5.199.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('iPhone 17 Pro', 5199900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. iPhone 17 -->
+                <div class="product-card" data-category="iphone17" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img data-local-img="phone17,iphone17,image_018324" 
+                             data-fallback="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-17.jpg" 
+                             src="img/phone17.png" alt="iPhone 17" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_ip17">Serie iPhone 17</span>
+                        <h3 class="product-name">iPhone 17</h3>
+                        <p class="product-specs" data-i18n="spec_ip17">128GB · Chip A19 · Pantalla OLED 120Hz</p>
+                        <div class="product-prices">
+                            <span class="price-original">$4.699.900</span>
+                            <span class="price-current">$3.759.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('iPhone 17', 3759900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ==================== AUDÍFONOS ==================== -->
+
+                <!-- 6. AirPods Pro 2 -->
+                <div class="product-card" data-category="audifonos" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=800&hei=800&fmt=jpeg&qlt=90" 
+                             alt="AirPods Pro 2 (USB-C)" loading="lazy"
+                             onerror="this.src='https://commons.wikimedia.org/wiki/Special:FilePath/AirPods_Pro_(2nd_generation).jpg?width=700';">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_audio">Audífonos</span>
+                        <h3 class="product-name">AirPods Pro 2 (USB-C)</h3>
+                        <p class="product-specs" data-i18n="spec_app2">Cancelación Activa de Ruido 2x · Audio Espacial</p>
+                        <div class="product-prices">
+                            <span class="price-original">$1.299.900</span>
+                            <span class="price-current">$1.039.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('AirPods Pro 2 (USB-C)', 1039900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 7. AirPods 4 con ANC -->
+                <div class="product-card" data-category="audifonos" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-4-anc-select-202409?wid=800&hei=800&fmt=jpeg&qlt=90" 
+                             alt="AirPods 4 con ANC" loading="lazy"
+                             onerror="this.src='https://commons.wikimedia.org/wiki/Special:FilePath/AirPods_4_ANC_and_case.jpg?width=700';">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_audio">Audífonos</span>
+                        <h3 class="product-name">AirPods 4 ANC</h3>
+                        <p class="product-specs" data-i18n="spec_ap4">Chip H2 · Cancelación Activa de Ruido · Estuche USB-C</p>
+                        <div class="product-prices">
+                            <span class="price-original">$949.900</span>
+                            <span class="price-current">$759.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('AirPods 4 ANC', 759900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 8. AirPods Max (USB-C) -->
+                <div class="product-card" data-category="audifonos" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-max-select-202409-midnight?wid=800&hei=800&fmt=jpeg&qlt=90" 
+                             alt="AirPods Max (USB-C)" loading="lazy"
+                             onerror="this.src='https://commons.wikimedia.org/wiki/Special:FilePath/AirPods_Max_black.jpg?width=700';">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category" data-i18n="cat_audio">Audífonos</span>
+                        <h3 class="product-name">AirPods Max (USB-C)</h3>
+                        <p class="product-specs" data-i18n="spec_apm">Audio de Alta Fidelidad · Cancelación Pro</p>
+                        <div class="product-prices">
+                            <span class="price-original">$2.799.900</span>
+                            <span class="price-current">$2.239.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('AirPods Max (USB-C)', 2239900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ==================== APPLE WATCH ==================== -->
+
+                <!-- 9. Apple Watch Series 10 -->
+                <div class="product-card" data-category="watch" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-watch-series-10.jpg" 
+                             alt="Apple Watch Series 10" loading="lazy"
+                             onerror="this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Apple_Watch_Series_10.png?width=700';">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Apple Watch</span>
+                        <h3 class="product-name">Apple Watch Series 10</h3>
+                        <p class="product-specs" data-i18n="spec_aws10">42mm / 46mm · GPS · Pantalla OLED Gran Angular</p>
+                        <div class="product-prices">
+                            <span class="price-original">$2.199.900</span>
+                            <span class="price-current">$1.759.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('Apple Watch Series 10', 1759900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 10. Apple Watch Ultra 2 -->
+                <div class="product-card" data-category="watch" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-watch-ultra-2.jpg" 
+                             alt="Apple Watch Ultra 2" loading="lazy"
+                             onerror="this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Apple_Watch_Ultra_2.jpg?width=700';">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Apple Watch</span>
+                        <h3 class="product-name">Apple Watch Ultra 2</h3>
+                        <p class="product-specs" data-i18n="spec_awu2">49mm · GPS + Cellular · Caja de Titanio</p>
+                        <div class="product-prices">
+                            <span class="price-original">$4.199.900</span>
+                            <span class="price-current">$3.359.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('Apple Watch Ultra 2', 3359900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 11. Apple Watch SE (2da Gen) -->
+                <div class="product-card" data-category="watch" data-animate>
+                    <div class="product-badge">-20% OFF</div>
+                    <div class="product-image">
+                        <img data-local-img="watchse,applewatchse" src="img/watchse.jpg" alt="Apple Watch SE (2da Gen)" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Apple Watch</span>
+                        <h3 class="product-name">Apple Watch SE (2da Gen)</h3>
+                        <p class="product-specs" data-i18n="spec_awse">40mm / 44mm · GPS · Caja Aluminio Blanco Estelar</p>
+                        <div class="product-prices">
+                            <span class="price-original">$1.349.900</span>
+                            <span class="price-current">$1.079.900</span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarAlCarrito('Apple Watch SE (2da Gen)', 1079900)">
+                            <span data-i18n="btn_add_cart">Añadir a la bolsa</span>
+                            <span class="cart-arrow"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN CONTACTO ==================== -->
+    <section class="section contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="contact_label">03 / ATENCIÓN DIRECTA</span>
+                <h2 class="section-title" data-i18n="contact_title">Canales de Contacto</h2>
+                <p class="section-description" data-i18n="contact_desc">
+                    ¿Deseas confirmar disponibilidad de algún acabado o referencia? 
+                    Escríbenos directamente a través de nuestras líneas oficiales.
+                </p>
+            </div>
+
+            <div class="contact-info-grid">
+                <div class="contact-card" data-animate>
+                    <div class="contact-card-icon whatsapp-green">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h4>WhatsApp Directo</h4>
+                        <p class="mono-text">314 809 4050</p>
+                        <a href="https://wa.me/573148094050?text=Hola%20Celutec%2C%20quiero%20información%20sobre%20sus%20productos" 
+                           target="_blank" rel="noopener" class="contact-link" data-i18n="contact_wa_link">
+                            Iniciar conversación ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card" data-animate>
+                    <div class="contact-card-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 data-i18n="contact_email_title">Correo Electrónico</h4>
+                        <p class="mono-text">contacto@celutec.com</p>
+                        <a href="mailto:contacto@celutec.com" class="contact-link" data-i18n="contact_email_link">
+                            Redactar mensaje ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card" data-animate>
+                    <div class="contact-card-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4 data-i18n="contact_hours_title">Horario de Atención</h4>
+                        <p data-i18n="contact_hours_desc">Lunes a Sábado<br>9:00 AM — 7:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-card" data-animate>
+                    <div class="contact-card-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <h4 data-i18n="contact_store_title">Sede Física</h4>
+                        <p>Cra. 7 #17-60<br>Pereira, Risaralda</p>
+                        <a href="#ubicacion" class="contact-link" data-i18n="contact_store_link">
+                            Ubicar en el mapa ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN UBICACIÓN ==================== -->
+    <section class="section location-section" id="ubicacion">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label" data-i18n="loc_label">04 / SEDE PEREIRA</span>
+                <h2 class="section-title" data-i18n="loc_title">Nuestra Ubicación</h2>
+                <p class="section-description" data-i18n="loc_desc">
+                    Visítanos en el corazón de Pereira y conoce de cerca cada equipo de nuestra colección.
+                </p>
+            </div>
+
+            <div class="location-grid">
+                <div class="map-container">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Carrera+7+%2317-60+Pereira+Risaralda+Colombia&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" 
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación de Celutec en Pereira">
+                    </iframe>
+                </div>
+
+                <div class="location-info">
+                    <div class="location-detail">
+                        <span class="detail-index">01</span>
+                        <div>
+                            <h4 data-i18n="loc_addr_title">Dirección</h4>
+                            <p>Cra. 7 #17-60, Pereira, Risaralda, Colombia</p>
+                        </div>
+                    </div>
+                    <div class="location-detail">
+                        <span class="detail-index">02</span>
+                        <div>
+                            <h4 data-i18n="loc_ref_title">Punto de Referencia</h4>
+                            <p data-i18n="loc_ref_desc">Centro de Pereira, a pocos pasos de la Plaza de Bolívar</p>
+                        </div>
+                    </div>
+                    <div class="location-detail">
+                        <span class="detail-index">03</span>
+                        <div>
+                            <h4 data-i18n="loc_how_title">Acceso</h4>
+                            <p data-i18n="loc_how_desc">Fácil acceso en transporte público y parqueaderos cercanos</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=Carrera+7+%2317-60+Pereira+Risaralda+Colombia" 
+                       target="_blank" rel="noopener" class="btn btn-primary">
+                        <span class="btn-label" data-i18n="loc_btn_maps">Abrir en Google Maps</span>
+                        <span class="btn-node"><i class="fa-solid fa-location-arrow"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER (Sin botones de redes sociales) ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#inicio" class="footer-logo">
+                        <img data-local-img="logo" src="img/logo.jpg" alt="Logo Celutec" class="footer-logo-img">
+                        <span>CELU<span class="logo-accent">TEC</span></span>
+                    </a>
+                    <p data-i18n="footer_desc">Boutique de celulares y accesorios en Pereira. Especialistas en iPhone Serie 17, Serie 18 Pro, AirPods y Apple Watch.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_nav">Explorar</h4>
+                    <ul>
+                        <li><a href="#inicio" data-i18n="nav_home">Inicio</a></li>
+                        <li><a href="#nosotros" data-i18n="nav_about">Nosotros</a></li>
+                        <li><a href="#productos" data-i18n="nav_products">Catálogo</a></li>
+                        <li><a href="#contacto" data-i18n="nav_contact">Contacto</a></li>
+                        <li><a href="#ubicacion" data-i18n="nav_location">Ubicación</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer_cat">Colecciones</h4>
+                    <ul>
+                        <li><a href="#productos" data-i18n="filter_ip18">Serie iPhone 18</a></li>
+                        <li><a href="#productos" data-i18n="filter_ip17">Serie iPhone 17</a></li>
+                        <li><a href="#productos">AirPods</a></li>
+                        <li><a href="#productos">Apple Watch</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="nav_contact">Contacto</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> Cra. 7 #17-60, Pereira</li>
+                        <li><i class="fa-brands fa-whatsapp"></i> 314 809 4050</li>
+                        <li><i class="fa-solid fa-envelope"></i> contacto@celutec.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer_copy">&copy; 2026 Celutec — Celulares y Accesorios | Pereira, Colombia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== BOTÓN FLOTANTE WHATSAPP ==================== -->
+    <a href="https://wa.me/573148094050?text=Hola%20Celutec%2C%20me%20interesa%20un%20producto%20%F0%9F%93%B1" 
+       class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip" data-i18n="wa_tooltip">Atención en línea</span>
+    </a>
+
+    <!-- ==================== CARRITO DE COMPRAS ==================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> <span data-i18n="cart_title">Mi Bolsa</span></h3>
+            <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <p data-i18n="cart_empty_title">Tu bolsa está vacía</p>
+                <span data-i18n="cart_empty_sub">Explora el catálogo y añade tus equipos favoritos</span>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span data-i18n="cart_total">Total estimado</span>
+                <span class="cart-total-amount" id="cartTotal">$0</span>
+            </div>
+            <button class="btn btn-primary btn-full" id="btnEnviarPedido" onclick="enviarPedidoWhatsApp()">
+                <span class="btn-label" data-i18n="cart_send_wa">Solicitar Pedido por WhatsApp</span>
+                <span class="btn-node"><i class="fa-brands fa-whatsapp"></i></span>
+            </button>
+            <button class="btn-cart-clear" onclick="vaciarCarrito()">
+                <i class="fa-solid fa-trash-can"></i> <span data-i18n="cart_clear">Limpiar bolsa</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- ==================== NOTIFICACIÓN TOAST ==================== -->
+    <div class="toast" id="toast">
+        <span class="toast-dot"></span>
+        <span id="toastMessage">Producto añadido a la bolsa</span>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
